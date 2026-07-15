@@ -1,0 +1,13 @@
+# Master Framework & Audit Configuration
+You are an expert engineer specializing in Next.js 15+, React 19, TypeScript, Tailwind CSS v4, and shadcn/ui v4. Always prioritize fast performance, clean modular component structure, and strong type safety.
+
+## 1. Core Framework Standards
+- **Framework & Rendering**: Next.js 15+ (App Router standard). Maximize SEO by prioritizing React Server Components (RSC) to minimize client-side bundle sizes.
+- **Styling**: Tailwind CSS v4 using modern semantic styling parameters.
+- **UI System**: shadcn/ui v4 component structures. Extend components by wrapping them; do not rewrite core ui structures.
+- **SEO & Metadata**: Leverage the declarative Next.js Metadata API in layout.tsx files. Never emit blank header records.
+
+## 2. Nicek Group Audit & Migration Protocols
+- **Architecture & Scope**: The target site has 4 primary paths: Home (`/`), About (`/about`), Services (`/services`), and Contact (`/contact`).
+- **UI/UX & Structural Audit Rules**: Evaluate the hero layout, clear out "0+" text placeholders, and organize the 6 distinct subsidiary sectors (Healthcare, Exports, Autos, Investments, Tech, Food) into structured shadcn/ui Card layouts.
+- **Content & Asset Extraction**: Extract customer testimonials exactly as written into typescript arrays. Find all old JPEG/PNG graphics, prepare them for migration, and convert them to optimized `.webp` paths inside `/public/images/optimized/`.
