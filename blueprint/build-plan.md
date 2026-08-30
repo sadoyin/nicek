@@ -25,7 +25,7 @@
 - [x] 6. **Contact info consistency** - reconcile the address, business
   hours, and phone numbers shown in the header, footer, and contact page body
   so they match everywhere. Flagged in `nicek-audit-report.md` section 1A.
-- [ ] 7. **Working contact form submission** - replace the `console.log` stub
+- [x] 7. **Working contact form submission** - replace the `console.log` stub
   in `handleContactSubmit` (`src/app/contact/page.tsx`) with a real delivery
   path (email and/or storage) and a genuine success/error state.
 

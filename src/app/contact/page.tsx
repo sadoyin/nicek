@@ -1,37 +1,70 @@
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Send,
   Building,
-  CheckCircle2
+  CheckCircle2,
+  XCircle
 } from "lucide-react";
+import { redirect } from "next/navigation";
+import { Resend } from "resend";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function getField(formData: FormData, key: string): string {
+  const value = formData.get(key);
+  return typeof value === "string" ? value.trim() : "";
+}
 
 // Server action for handling contact form submission progressively (works without client-side JS!)
 async function handleContactSubmit(formData: FormData) {
   "use server";
-  
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const subject = formData.get("subject");
-  const message = formData.get("message");
-  const website = formData.get("website"); // Honey pot field for spam detection
 
-  console.log("Contact submission received:", { name, email, subject, message, website });
-  
-  // Return redirect or status if we want to show a success page.
-  // For simplicity, we can redirect or let the action render a success query param.
+  // Honeypot: real users never see or fill this field. Redirect to success
+  // without sending, so a bot never learns its submission was caught.
+  if (getField(formData, "website") !== "") {
+    redirect("/contact?success=true");
+  }
+
+  const name = getField(formData, "name");
+  const email = getField(formData, "email");
+  const subject = getField(formData, "subject");
+  const message = getField(formData, "message");
+
+  const isValid = Boolean(name && email && subject && message && EMAIL_PATTERN.test(email));
+  if (!isValid) {
+    redirect("/contact?error=true");
+  }
+
+  let delivered = false;
+  try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const { error } = await resend.emails.send({
+      from: process.env.CONTACT_EMAIL_FROM || "onboarding@resend.dev",
+      to: process.env.CONTACT_EMAIL_TO || "info@nicekgroup.com",
+      replyTo: email,
+      subject: `New contact form submission: ${subject}`,
+      text: `From: ${name} <${email}>\n\n${message}`,
+    });
+    delivered = !error;
+  } catch {
+    delivered = false;
+  }
+
+  redirect(delivered ? "/contact?success=true" : "/contact?error=true");
 }
 
 interface ContactPageProps {
-  searchParams?: Promise<{ success?: string }>;
+  searchParams?: Promise<{ success?: string; error?: string }>;
 }
 
 export default async function ContactPage({ searchParams }: ContactPageProps) {
   const params = await searchParams;
   const isSuccess = params?.success === "true";
+  const isError = params?.error === "true";
 
   return (
     <div className="flex flex-col min-h-full font-sans">
@@ -184,6 +217,19 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                       <h3 className="text-lg font-bold text-emerald-700 dark:text-emerald-400">Message Sent Successfully</h3>
                       <p className="text-sm text-emerald-600 dark:text-emerald-500">
                         Thank you for reaching out. A representative will contact you within 1 business hour.
+                      </p>
+                    </div>
+                  ) : isError ? (
+                    <div className="rounded-xl bg-red-500/10 border border-red-500/20 p-6 text-center space-y-3">
+                      <div className="inline-flex p-3 bg-red-500 text-white rounded-full mx-auto">
+                        <XCircle className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-lg font-bold text-red-700 dark:text-red-400">Something Went Wrong</h3>
+                      <p className="text-sm text-red-600 dark:text-red-500">
+                        We could not send your message. Please check your details and try again, or reach us
+                        directly at{" "}
+                        <a href="mailto:info@nicekgroup.com" className="underline">info@nicekgroup.com</a> or{" "}
+                        <a href="tel:+17324980072" className="underline">+1 732-498-0072</a>.
                       </p>
                     </div>
                   ) : (
