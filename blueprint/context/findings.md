@@ -24,20 +24,6 @@ dead links on every page (they're in the global footer).
 policy, terms, cookie policy) don't exist yet, so there's nothing real to
 link. Revisit once that content is available.
 
-### F-07 [P3] open - No custom 404 or error boundary page
-
-**File:** n/a (missing: `src/app/not-found.tsx`, `src/app/error.tsx`)
-**Found:** 2026-09-01 by /audit (scope: full; lens: UI-UX)
-**Why it matters:** Confirmed missing. A visitor hitting a typo'd URL or a
-dead external link sees Next.js's bare default 404 page - no branding, no
-nav back into the site, no matching light/dark theme. Same for an unexpected
-runtime error (Next's default error screen). Both are one-file, low-effort
-additions expected on a "modern website."
-**Suggested fix:** Add `src/app/not-found.tsx` and `src/app/error.tsx`
-matching the site's existing banner/CTA visual pattern, with a link back to
-`/` and `/contact`.
-**Resolution:**
-
 ### F-08 [P3] open - No explicit focus-visible styling on most interactive elements
 
 **File:** navbar links, hero/CTA buttons, subsidiary/service cards across
