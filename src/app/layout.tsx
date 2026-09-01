@@ -48,6 +48,49 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Nicek Group",
+  url: getSiteUrl(),
+  logo: `${getSiteUrl()}/images/optimized/cropped-logo_nicek.webp`,
+  sameAs: [
+    "https://instagram.com/nicekgroup",
+    "https://facebook.com/nicekgroup",
+    "https://youtube.com/nicekgroup",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-732-498-0072",
+    email: "info@nicekgroup.com",
+    contactType: "customer service",
+  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "30 N Gould Street, #49357",
+      addressLocality: "Sheridan",
+      addressRegion: "WY",
+      postalCode: "82801",
+      addressCountry: "US",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "304 North Cardinal St.",
+      addressLocality: "Dorchester Center",
+      addressRegion: "MA",
+      postalCode: "02124",
+      addressCountry: "US",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "20 Ladipo, Oshodi",
+      addressRegion: "Lagos State",
+      addressCountry: "NG",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +102,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-zinc-50/50 dark:bg-zinc-950 text-zinc-950 dark:text-zinc-50">
+        {/* Structured data for search engine rich results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+
         {/* Global Dynamic Header/Navbar */}
         <Navbar />
 

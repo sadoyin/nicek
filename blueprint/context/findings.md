@@ -7,23 +7,6 @@
 > finding is `open` or `fixed`, then archives resolved findings with the work
 > and resets this file.
 
-### F-04 [P2] open - No structured data (JSON-LD) for the business
-
-**File:** n/a (no `application/ld+json` anywhere in `src/`)
-**Found:** 2026-09-01 by /audit (scope: full; lens: SEO)
-**Why it matters:** Confirmed via grep - no structured data anywhere. For a
-company with multiple named physical offices, phone numbers, and hours
-(already in the footer), adding `Organization`/`LocalBusiness` JSON-LD is
-standard modern SEO practice - it's what enables Google to show rich
-snippets (address, hours, phone, logo) directly in search results instead of
-a plain blue link. This is exactly the kind of gap a revamp-for-SEO project
-should close.
-**Suggested fix:** Add a JSON-LD `<script type="application/ld+json">` block
-in `layout.tsx` with `Organization` schema (name, logo, url, sameAs for the
-social links, and `ContactPoint`/`PostalAddress` per office using the data
-already in the footer).
-**Resolution:**
-
 ### F-05 [P2] open - Disclosure menus don't expose open/closed state to assistive tech
 
 **File:** src/components/navbar.tsx:104-111 (services dropdown trigger),
