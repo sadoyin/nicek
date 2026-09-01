@@ -56,7 +56,7 @@ icon swap are sighted-only cues.
 `aria-expanded={mobileMenuOpen}` to the hamburger button.
 **Resolution:**
 
-### F-06 [P2] open - Footer legal links are dead placeholders
+### F-06 [P2] accepted - Footer legal links are dead placeholders
 
 **File:** src/app/layout.tsx:200-217 (Privacy Policy, Terms of Service, Cookie Policy)
 **Found:** 2026-09-01 by /audit (scope: full; lens: UI-UX)
@@ -69,7 +69,9 @@ business site asking visitors to submit personal information.
 **Suggested fix:** Either write and link real Privacy/Terms/Cookie pages, or
 temporarily remove the links until that content exists, rather than shipping
 dead links on every page (they're in the global footer).
-**Resolution:**
+**Resolution:** Accepted by the user (2026-09-01): legal documents (privacy
+policy, terms, cookie policy) don't exist yet, so there's nothing real to
+link. Revisit once that content is available.
 
 ### F-07 [P3] open - No custom 404 or error boundary page
 
