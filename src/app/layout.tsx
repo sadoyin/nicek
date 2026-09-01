@@ -19,8 +19,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 // Declarative Next.js Metadata API for SEO optimization resolving Title and Meta descriptions
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Nicek Group | Diversified Conglomerate - Trade, Tech, Healthcare",
   description:
     "Nicek Group is a diversified conglomerate operating across the United States and Nigeria, committed to excellence in healthcare services, international trade and exports, auto parts, IT solutions, and strategic investments.",

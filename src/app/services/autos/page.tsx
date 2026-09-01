@@ -57,7 +57,13 @@ export default function AutosPage() {
             </div>
 
             <div className="lg:col-span-5 relative aspect-square max-w-md mx-auto w-full rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800 bg-zinc-50">
-              <Image src="/images/optimized/autoparts-scaled.webp" alt="Auto Parts Representation" fill className="object-cover" />
+              <Image
+                src="/images/optimized/autoparts-scaled.webp"
+                alt="Auto Parts Representation"
+                fill
+                sizes="(max-width: 768px) 100vw, 448px"
+                className="object-cover"
+              />
             </div>
           </div>
 
