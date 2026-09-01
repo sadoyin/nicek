@@ -127,4 +127,9 @@
   html {
     @apply font-sans;
   }
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    @apply outline-2 outline-offset-2 outline-zinc-900 dark:outline-zinc-100;
+  }
 }
