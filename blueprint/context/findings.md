@@ -7,22 +7,6 @@
 > finding is `open` or `fixed`, then archives resolved findings with the work
 > and resets this file.
 
-### F-05 [P2] open - Disclosure menus don't expose open/closed state to assistive tech
-
-**File:** src/components/navbar.tsx:104-111 (services dropdown trigger),
-src/components/navbar.tsx:180-186 (mobile hamburger)
-**Found:** 2026-09-01 by /audit (scope: full; lens: UI-UX)
-**Why it matters:** Both buttons toggle a menu's visibility (`servicesDropdownOpen`,
-`mobileMenuOpen`) but neither sets `aria-expanded` to reflect current state,
-and the dropdown trigger has no `aria-haspopup`. A screen reader user tabbing
-to "Services" or the hamburger icon has no way to know it opens a submenu or
-whether it's currently open - the visual chevron rotation and X/hamburger
-icon swap are sighted-only cues.
-**Suggested fix:** Add `aria-expanded={servicesDropdownOpen}` and
-`aria-haspopup="true"` to the dropdown trigger button; add
-`aria-expanded={mobileMenuOpen}` to the hamburger button.
-**Resolution:**
-
 ### F-06 [P2] accepted - Footer legal links are dead placeholders
 
 **File:** src/app/layout.tsx:200-217 (Privacy Policy, Terms of Service, Cookie Policy)

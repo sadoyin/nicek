@@ -101,9 +101,11 @@ export function Navbar() {
           
           {/* Services Dropdown Trigger */}
           <div className="relative">
-            <button 
+            <button
               onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
               onMouseEnter={() => setServicesDropdownOpen(true)}
+              aria-haspopup="true"
+              aria-expanded={servicesDropdownOpen}
               className={`flex items-center gap-1 transition-colors hover:text-zinc-950 dark:hover:text-white ${pathname.startsWith("/services") ? "text-zinc-950 dark:text-white" : ""}`}
             >
               Services
@@ -181,6 +183,7 @@ export function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
             aria-label="Toggle Menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
