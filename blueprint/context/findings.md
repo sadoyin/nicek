@@ -7,22 +7,6 @@
 > finding is `open` or `fixed`, then archives resolved findings with the work
 > and resets this file.
 
-### F-03 [P2] open - No sitemap.xml or robots.txt
-
-**File:** n/a (missing: `src/app/sitemap.ts`, `src/app/robots.ts`)
-**Found:** 2026-09-01 by /audit (scope: full; lens: SEO)
-**Why it matters:** Confirmed missing (checked `src/app/sitemap.ts`,
-`src/app/robots.ts`, `public/sitemap.xml`, `public/robots.txt` - none exist).
-A 10-route multi-page site with no sitemap makes search engines rely purely
-on crawl discovery through internal links instead of an explicit page list,
-slowing indexing of newer or less-linked pages (e.g. the individual service
-detail pages). No robots.txt means no explicit crawl guidance or sitemap
-pointer either.
-**Suggested fix:** Add `src/app/sitemap.ts` (Next's built-in `MetadataRoute.Sitemap`
-API) listing all 10 routes, and `src/app/robots.ts` pointing at it. Both are
-small, standard Next.js App Router files.
-**Resolution:**
-
 ### F-04 [P2] open - No structured data (JSON-LD) for the business
 
 **File:** n/a (no `application/ld+json` anywhere in `src/`)

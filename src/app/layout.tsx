@@ -8,6 +8,7 @@ import "./globals.css";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { FacebookIcon } from "@/components/FacebookIcon";
 import { YoutubeIcon } from "@/components/YoutubeIcon";
+import { getSiteUrl } from "@/lib/site-url";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,13 +20,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
-
 // Declarative Next.js Metadata API for SEO optimization resolving Title and Meta descriptions
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "Nicek Group | Diversified Conglomerate - Trade, Tech, Healthcare",
     template: "%s | Nicek Group",
