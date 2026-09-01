@@ -56,10 +56,10 @@ export default function ExportsPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
                 Global Market Trade & Logistics
               </h2>
-              <p className="text-zinc-650 dark:text-zinc-400 leading-relaxed text-base">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
                 Anchor American Exports connects global markets with premium exports from the Americas. We provide reliable shipping and procurement services for customers who want to procure specific products, directly managing trade corridors from supply origin to your local ports.
               </p>
-              <p className="text-zinc-655 dark:text-zinc-405 leading-relaxed text-sm">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
                 By leveraging robust shipping partnerships, compliance systems, and strategic logistics hubs in the United States and Nigeria, we secure agricultural commodities, factory materials, and finished retail assets with unmatched efficiency.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function ExportsPage() {
 
           {/* CTA Block */}
           <div className="rounded-2xl bg-zinc-900 text-white p-8 sm:p-12 text-center space-y-6 relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-855 to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-800 to-transparent opacity-50" />
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight relative z-10">
               Need a Trusted Cross-Border Importer?
             </h3>

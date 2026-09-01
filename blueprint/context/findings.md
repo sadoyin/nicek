@@ -7,40 +7,6 @@
 > finding is `open` or `fixed`, then archives resolved findings with the work
 > and resets this file.
 
-### F-02 [P1] closed - 30 uses of non-existent Tailwind zinc shades produce no CSS
-
-**File:** src/components/navbar.tsx (6), src/app/contact/page.tsx (1),
-src/app/about/page.tsx (1), src/app/services/page.tsx (1),
-src/app/services/{autos,tech,food}/page.tsx (4 each),
-src/app/services/{exports,investments,healthcare}/page.tsx (3 each)
-**Found:** 2026-09-01 by /audit (scope: full; lens: SEO/UI-UX)
-**Why it matters:** Classes like `text-zinc-650`, `dark:text-zinc-450`,
-`hover:bg-zinc-850`, `text-zinc-655`, `text-zinc-405`, `text-zinc-455` use
-shade steps that don't exist in Tailwind's zinc scale (50-900 in steps of
-100, then 950 - no 405/450/455/650/655/850/855). Verified empirically: grepped
-the actual compiled production CSS
-(`.next/static/chunks/45c4_jlxeq202.css`) and confirmed `.text-zinc-650`,
-`.text-zinc-450`, and `.zinc-850` generate **zero** rules, while the control
-`.text-zinc-500` correctly generates one. These 30 utility usages are dead -
-Tailwind silently drops them, so the element falls back to whatever color it
-inherits instead of the intended one. This is live on the deployed site right
-now and affects text color consistency (and potentially contrast/legibility)
-across nearly every page.
-**Suggested fix:** Replace each with the nearest real step on the zinc scale
-(650→600 or 700, 450→400 or 500, 850→800 or 900, etc., picking based on which
-direction preserves the intended contrast). A single find-and-replace pass
-across the 10 files, verified by re-grepping the compiled CSS afterward.
-**Resolution:** Fixed via `/fix` (2026-09-01): replaced `zinc-650`/`zinc-655`
-with `zinc-600`, `zinc-450`/`zinc-455`/`zinc-405` with `zinc-400`, and
-`zinc-850`/`zinc-855` with `zinc-800` across all 10 files. Closed by `/audit`
-(2026-09-01, scope: current branch fix/tailwind-zinc-shades vs main; lens:
-all): reviewed the full diff across all 10 changed files - every hunk is a
-pure class-value swap matching the stated mapping exactly, no structural,
-logic, or unrelated changes. Re-confirmed zero matches for the corrupted
-pattern in `src/`, build passes, and the compiled production CSS contains
-real rules for `.text-zinc-600`, `text-zinc-400`, and `zinc-800` where the
-dead classes used to be. No new defect introduced by the repair.
-
 ### F-03 [P2] open - No sitemap.xml or robots.txt
 
 **File:** n/a (missing: `src/app/sitemap.ts`, `src/app/robots.ts`)

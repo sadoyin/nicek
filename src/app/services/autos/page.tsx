@@ -60,10 +60,10 @@ export default function AutosPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
                 Quality & Affordable Automobile Spares
               </h2>
-              <p className="text-zinc-650 dark:text-zinc-400 leading-relaxed text-base">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
                 Do you need reliable automobile spare parts? Anchor Auto Spare Parts has you covered. We source and ship premium automotive components and replacement parts that keep vehicles running smoothly and support drivers worldwide.
               </p>
-              <p className="text-zinc-655 dark:text-zinc-405 leading-relaxed text-sm">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
                 Our main focus is on bridging gaps in high-demand automobile spare markets. By working with top-tier international suppliers, we procure reliable components, assemblies, and complete engines, ensuring workshops have access to solid spares.
               </p>
             </div>
@@ -148,7 +148,7 @@ export default function AutosPage() {
           {/* Testimonial Quote */}
           <div className="bg-zinc-50/80 dark:bg-zinc-900/20 rounded-2xl p-6 sm:p-8 border border-zinc-200/40 dark:border-zinc-800/40 italic relative">
             <span className="text-6xl text-zinc-200 dark:text-zinc-800 font-serif absolute -top-2 left-4 select-none leading-none">“</span>
-            <p className="text-sm sm:text-base text-zinc-650 dark:text-zinc-400 relative z-10 leading-relaxed pt-2">
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 relative z-10 leading-relaxed pt-2">
               I wanted to ship in three automobile engines, a BMW and two Toyota engines, but I did not know a trusted importer, Anchor Auto Spare Parts gave me solid engines my mechanics were shocked.
             </p>
             <div className="text-right text-xs sm:text-sm font-bold text-zinc-900 dark:text-white mt-4 relative z-10">
@@ -158,7 +158,7 @@ export default function AutosPage() {
 
           {/* CTA Block */}
           <div className="rounded-2xl bg-zinc-900 text-white p-8 sm:p-12 text-center space-y-6 relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-855 to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-800 to-transparent opacity-50" />
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight relative z-10">
               Request Specific Engine or Spares Procurement
             </h3>

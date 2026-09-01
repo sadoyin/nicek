@@ -163,7 +163,7 @@ export function Navbar() {
           {/* Theme Toggle Button */}
           <button 
             onClick={toggleTheme} 
-            className="p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-450 hover:bg-zinc-50 dark:hover:bg-zinc-850 hover:text-zinc-950 dark:hover:text-white transition-colors"
+            className="p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-zinc-950 dark:hover:text-white transition-colors"
             aria-label="Toggle Theme Mode"
           >
             {theme === "light" ? <Moon className="w-4.5 h-4.5" /> : <Sun className="w-4.5 h-4.5" />}
@@ -179,7 +179,7 @@ export function Navbar() {
           {/* Mobile Hamburger Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-650 hover:bg-zinc-50 dark:hover:bg-zinc-850 transition-colors"
+            className="md:hidden p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -193,20 +193,20 @@ export function Navbar() {
           <div className="max-w-7xl mx-auto px-4 py-6 space-y-4 flex flex-col">
             <Link 
               href="/" 
-              className={`text-base font-semibold py-2 border-b border-zinc-100 dark:border-zinc-900 ${pathname === "/" ? "text-zinc-950 dark:text-white" : "text-zinc-650 dark:text-zinc-400"}`}
+              className={`text-base font-semibold py-2 border-b border-zinc-100 dark:border-zinc-900 ${pathname === "/" ? "text-zinc-950 dark:text-white" : "text-zinc-600 dark:text-zinc-400"}`}
             >
               Home
             </Link>
             <Link 
               href="/about" 
-              className={`text-base font-semibold py-2 border-b border-zinc-100 dark:border-zinc-900 ${pathname === "/about" ? "text-zinc-950 dark:text-white" : "text-zinc-650 dark:text-zinc-400"}`}
+              className={`text-base font-semibold py-2 border-b border-zinc-100 dark:border-zinc-900 ${pathname === "/about" ? "text-zinc-950 dark:text-white" : "text-zinc-600 dark:text-zinc-400"}`}
             >
               About
             </Link>
             
             {/* Mobile Expandable Services Sectors */}
             <div className="space-y-2 border-b border-zinc-100 dark:border-zinc-900 pb-2">
-              <span className="text-base font-semibold text-zinc-650 dark:text-zinc-455 block py-2">
+              <span className="text-base font-semibold text-zinc-600 dark:text-zinc-400 block py-2">
                 Services & Subsidiaries
               </span>
               <div className="grid grid-cols-1 gap-2 pl-4">
@@ -234,7 +234,7 @@ export function Navbar() {
 
             <Link 
               href="/contact" 
-              className={`text-base font-semibold py-2 ${pathname === "/contact" ? "text-zinc-950 dark:text-white" : "text-zinc-650 dark:text-zinc-400"}`}
+              className={`text-base font-semibold py-2 ${pathname === "/contact" ? "text-zinc-950 dark:text-white" : "text-zinc-600 dark:text-zinc-400"}`}
             >
               Contact
             </Link>

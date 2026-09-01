@@ -56,10 +56,10 @@ export default function FoodPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
                 Nutritious Food & Consumable Beverages
               </h2>
-              <p className="text-zinc-655 dark:text-zinc-400 leading-relaxed text-base">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
                 Committed to creating quality food and beverages that refresh, nourish, and bring people together. C&C Food and Beverages manufactures table water and consumable items using locally sourced ingredients, eco-friendly packaging, and strict quality assurance checks.
               </p>
-              <p className="text-zinc-655 dark:text-zinc-405 leading-relaxed text-sm">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
                 We craft our beverages to blend nutrition with enjoyment, supporting local communities through fair-trade sourcing and minimizing ecological footprints with bio-degradable bottle designs and carbon-neutral distribution logs.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function FoodPage() {
           {/* Testimonial Quote */}
           <div className="bg-zinc-50/80 dark:bg-zinc-900/20 rounded-2xl p-6 sm:p-8 border border-zinc-200/40 dark:border-zinc-800/40 italic relative">
             <span className="text-6xl text-zinc-200 dark:text-zinc-800 font-serif absolute -top-2 left-4 select-none leading-none">“</span>
-            <p className="text-sm sm:text-base text-zinc-650 dark:text-zinc-400 relative z-10 leading-relaxed pt-2">
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 relative z-10 leading-relaxed pt-2">
               For some years now, I have relied on C&C Food and Beverages to supply me with portable water, and I want to appreciate their dedication to restocking my house without my knowledge, premium services.
             </p>
             <div className="text-right text-xs sm:text-sm font-bold text-zinc-900 dark:text-white mt-4 relative z-10">
@@ -109,7 +109,7 @@ export default function FoodPage() {
 
           {/* CTA Block */}
           <div className="rounded-2xl bg-zinc-900 text-white p-8 sm:p-12 text-center space-y-6 relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-855 to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-800 to-transparent opacity-50" />
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight relative z-10">
               Set Up Scheduled Water or Beverage Delivery
             </h3>

@@ -203,7 +203,7 @@ export default function AboutPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     {val.points.map((p, pIdx) => (
-                      <p key={pIdx} className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pl-1 border-l-2 border-zinc-200 dark:border-zinc-850">
+                      <p key={pIdx} className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pl-1 border-l-2 border-zinc-200 dark:border-zinc-800">
                         {p}
                       </p>
                     ))}

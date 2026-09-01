@@ -56,10 +56,10 @@ export default function InvestmentsPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
                 Strategic Partnerships & Capital Growth
               </h2>
-              <p className="text-zinc-650 dark:text-zinc-400 leading-relaxed text-base">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
                 We create lasting value through strategic investment portfolios, with a strong emphasis on real estate, helping clients and institutional partners achieve sustainable growth.
               </p>
-              <p className="text-zinc-655 dark:text-zinc-405 leading-relaxed text-sm">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
                 Government partners, entrepreneurs, and global investors can key into Nicek Investments Nigeria Ltd and add to creating more jobs, community development, and substantial ROI. By leveraging deep market insights and strict risk management, we maximize community impact and investor returns.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function InvestmentsPage() {
 
           {/* CTA Block */}
           <div className="rounded-2xl bg-zinc-900 text-white p-8 sm:p-12 text-center space-y-6 relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-855 to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-800 to-transparent opacity-50" />
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight relative z-10">
               Interested in Strategic Partnerships?
             </h3>

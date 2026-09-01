@@ -57,10 +57,10 @@ export default function HealthcarePage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
                 Trusted Clinical Care & Wellness Solutions
               </h2>
-              <p className="text-zinc-650 dark:text-zinc-400 leading-relaxed text-base">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
                 Nicek Healthcare Services provides professional healthcare services for individuals, hospitals, senior care facilities, and corporate wellness programs. We prioritize patient care by offering advanced technologies and easily accessible solutions for a healthier, stronger, and more fulfilled tomorrow.
               </p>
-              <p className="text-zinc-655 dark:text-zinc-405 leading-relaxed text-sm">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
                 Our operations focus on bridging clinical gaps through technology-driven diagnostics, flexible medical staffing models, and progressive telemedicine solutions designed to deliver clinical excellence directly where it is needed.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function HealthcarePage() {
 
           {/* CTA Block */}
           <div className="rounded-2xl bg-zinc-900 text-white p-8 sm:p-12 text-center space-y-6 relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-850 to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-radial-[circle_at_bottom_right] from-zinc-800 to-transparent opacity-50" />
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight relative z-10">
               Require Healthcare Services or Staffing Solutions?
             </h3>
