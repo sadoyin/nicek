@@ -26,7 +26,10 @@ const siteUrl =
 // Declarative Next.js Metadata API for SEO optimization resolving Title and Meta descriptions
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Nicek Group | Diversified Conglomerate - Trade, Tech, Healthcare",
+  title: {
+    default: "Nicek Group | Diversified Conglomerate - Trade, Tech, Healthcare",
+    template: "%s | Nicek Group",
+  },
   description:
     "Nicek Group is a diversified conglomerate operating across the United States and Nigeria, committed to excellence in healthcare services, international trade and exports, auto parts, IT solutions, and strategic investments.",
   openGraph: {

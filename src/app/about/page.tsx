@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,6 +12,17 @@ import {
   MessageSquareQuote
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about Nicek Group's mission, vision, and values - a diversified conglomerate delivering sustainable value across healthcare, trade, technology, and real estate in the US and Nigeria.",
+  openGraph: {
+    title: "About Us | Nicek Group",
+    description:
+      "Learn about Nicek Group's mission, vision, and values - a diversified conglomerate delivering sustainable value across healthcare, trade, technology, and real estate in the US and Nigeria.",
+  },
+};
 
 // Extracted testimonials matching the TypeScript type and data from audit report
 interface Testimonial {

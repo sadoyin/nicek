@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Utensils, Droplet, Leaf, ShieldCheck, Heart, ArrowLeft, PhoneCall } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Food & Beverages",
+  description:
+    "C&C Food and Beverages manufactures premium bottled water and consumable beverages using locally sourced, eco-friendly ingredients and packaging.",
+  openGraph: {
+    title: "Food & Beverages | Nicek Group",
+    description:
+      "C&C Food and Beverages manufactures premium bottled water and consumable beverages using locally sourced, eco-friendly ingredients and packaging.",
+  },
+};
 
 const features = [
   { title: "Table Water", desc: "Manufacturing purified, micro-filtered premium table bottled water for residential and commercial use.", icon: Droplet },

@@ -1,12 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Heart, 
-  Globe2, 
-  Wrench, 
-  TrendingUp, 
-  Cpu, 
-  Utensils, 
+import {
+  Heart,
+  Globe2,
+  Wrench,
+  TrendingUp,
+  Cpu,
+  Utensils,
   ArrowRight,
   ShieldCheck,
   CheckCircle,
@@ -14,6 +15,17 @@ import {
   Database
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Explore Nicek Group's services across healthcare, international exports, auto spare parts, technology, real estate investments, and food & beverage production.",
+  openGraph: {
+    title: "Our Services | Nicek Group",
+    description:
+      "Explore Nicek Group's services across healthcare, international exports, auto spare parts, technology, real estate investments, and food & beverage production.",
+  },
+};
 
 // Main services overview matching copy text
 const mainServices = [

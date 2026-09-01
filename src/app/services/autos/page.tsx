@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Wrench, ShieldAlert, Cpu, Settings, Truck, ArrowLeft, PhoneCall, Radio } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Auto Spare Parts",
+  description:
+    "Anchor Auto Spare Parts sources and ships premium automotive components, replacement parts, and engines for workshops and mechanics worldwide.",
+  openGraph: {
+    title: "Auto Spare Parts | Nicek Group",
+    description:
+      "Anchor Auto Spare Parts sources and ships premium automotive components, replacement parts, and engines for workshops and mechanics worldwide.",
+  },
+};
 
 const engineBrands = [
   "Toyota", "Hyundai", "Audi", "Ford", "Honda", "Kia", "Mercedes Benz", "BMW", "Nissan"

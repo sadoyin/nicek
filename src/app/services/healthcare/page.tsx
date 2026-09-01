@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Heart, Activity, ShieldCheck, HeartPulse, Stethoscope, ArrowLeft, PhoneCall } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Healthcare Services",
+  description:
+    "Nicek Healthcare Services delivers home healthcare, medical staffing, telemedicine, and corporate wellness programs for individuals, hospitals, and senior care facilities.",
+  openGraph: {
+    title: "Healthcare Services | Nicek Group",
+    description:
+      "Nicek Healthcare Services delivers home healthcare, medical staffing, telemedicine, and corporate wellness programs for individuals, hospitals, and senior care facilities.",
+  },
+};
 
 const features = [
   { title: "Home Healthcare", desc: "Compassionate, professional clinical care delivered in the comfort of patients' homes.", icon: HeartPulse },

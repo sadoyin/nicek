@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Globe2, Ship, Leaf, Factory, Package, ArrowLeft, PhoneCall } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "International Exports",
+  description:
+    "Anchor American Exports connects global markets with premium shipping and procurement of agricultural produce, industrial materials, and consumer goods from the Americas.",
+  openGraph: {
+    title: "International Exports | Nicek Group",
+    description:
+      "Anchor American Exports connects global markets with premium shipping and procurement of agricultural produce, industrial materials, and consumer goods from the Americas.",
+  },
+};
 
 const features = [
   { title: "Premium Shipping", desc: "Connecting global markets with fast, safe, and efficient container logistics from major American terminals.", icon: Ship },

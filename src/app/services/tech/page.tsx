@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Cpu, ShieldCheck, Cloud, Code2, Users, ArrowLeft, PhoneCall } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Technology Solutions",
+  description:
+    "Nicek Technologies delivers IT consulting, cloud solutions, cybersecurity, and custom software development to help businesses operate securely and efficiently.",
+  openGraph: {
+    title: "Technology Solutions | Nicek Group",
+    description:
+      "Nicek Technologies delivers IT consulting, cloud solutions, cybersecurity, and custom software development to help businesses operate securely and efficiently.",
+  },
+};
 
 const features = [
   { title: "IT Consulting", desc: "Strategic technology roadmaps designed to streamline operations and align with business objectives.", icon: Users },

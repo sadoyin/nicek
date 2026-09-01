@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { TrendingUp, Building2, Landmark, Tractor, LineChart, ArrowLeft, PhoneCall } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Investments & Real Estate",
+  description:
+    "Nicek Investments delivers strategic real estate development, agricultural investments, and infrastructure funding partnerships across Nigeria and beyond.",
+  openGraph: {
+    title: "Investments & Real Estate | Nicek Group",
+    description:
+      "Nicek Investments delivers strategic real estate development, agricultural investments, and infrastructure funding partnerships across Nigeria and beyond.",
+  },
+};
 
 const features = [
   { title: "Real Estate Development", desc: "Investing in high-yield residential, commercial, and mixed-use property portfolios.", icon: Building2 },

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Phone,
   Mail,
@@ -11,6 +12,17 @@ import {
 import { redirect } from "next/navigation";
 import { Resend } from "resend";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Nicek Group's offices in Wyoming, Boston, and Lagos for partnerships, supply requests, and consulting services.",
+  openGraph: {
+    title: "Contact Us | Nicek Group",
+    description:
+      "Get in touch with Nicek Group's offices in Wyoming, Boston, and Lagos for partnerships, supply requests, and consulting services.",
+  },
+};
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
