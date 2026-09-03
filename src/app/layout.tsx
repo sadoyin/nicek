@@ -115,7 +115,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         {/* Consolidated Footer - Resolving Address and Contact Discrepancies Globally */}
-        <footer className="bg-zinc-900 dark:bg-zinc-950 text-zinc-400 border-t border-zinc-800/60 py-16">
+        <footer className="bg-zinc-900 dark:bg-zinc-950 text-zinc-300 border-t border-zinc-800/60 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-zinc-800/50">
               {/* Column 1: Info */}
@@ -133,7 +133,7 @@ export default function RootLayout({
                     NICEK GROUP
                   </span>
                 </div>
-                <p className="text-sm text-zinc-400">
+                <p className="text-sm text-zinc-300">
                   Diversified conglomerate connecting global markets and
                   delivering premium services in trade, tech, health, and
                   investments.
@@ -198,7 +198,7 @@ export default function RootLayout({
                       <MapPin className="w-3.5 h-3.5 text-zinc-500" />
                       Wyoming (HQ)
                     </span>
-                    <p className="text-zinc-400 leading-normal">
+                    <p className="text-zinc-300 leading-normal">
                       30 N Gould Street, #49357
                       <br />
                       Sheridan, WY 82801
@@ -209,7 +209,7 @@ export default function RootLayout({
                       <MapPin className="w-3.5 h-3.5 text-zinc-500" />
                       Boston Office
                     </span>
-                    <p className="text-zinc-400 leading-normal">
+                    <p className="text-zinc-300 leading-normal">
                       304 North Cardinal St.
                       <br />
                       Dorchester Center, MA 02124
@@ -220,7 +220,7 @@ export default function RootLayout({
                       <MapPin className="w-3.5 h-3.5 text-zinc-500" />
                       Lagos, Nigeria Office
                     </span>
-                    <p className="text-zinc-400 leading-normal">
+                    <p className="text-zinc-300 leading-normal">
                       20 Ladipo, Oshodi, Lagos State
                     </p>
                   </div>
@@ -234,7 +234,7 @@ export default function RootLayout({
                     <Clock className="w-4 h-4 text-zinc-500" />
                     Business Hours
                   </h3>
-                  <div className="space-y-1 text-sm text-zinc-400">
+                  <div className="space-y-1 text-sm text-zinc-300">
                     <div className="flex justify-between border-b border-zinc-800/40 pb-1.5">
                       <span>Monday - Friday</span>
                       <span className="text-zinc-200">7:00 AM - 7:00 PM</span>
@@ -274,7 +274,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+            <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-300 gap-4">
               <p>
                 Copyright © 2026 - Nicek Group of Companies. All rights
                 reserved.
