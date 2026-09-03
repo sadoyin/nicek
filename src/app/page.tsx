@@ -283,10 +283,10 @@ export default function Home() {
 
                   <CardFooter className="pt-0 border-t border-zinc-100/50 dark:border-zinc-900/50 mt-auto">
                     <Link
-                      href="/services"
+                      href={`/services/${sub.sector.toLowerCase()}`}
                       className="group/btn inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors pt-4 w-full"
                     >
-                      Learn More
+                      Learn More<span className="sr-only"> about {sub.name}</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
                   </CardFooter>
