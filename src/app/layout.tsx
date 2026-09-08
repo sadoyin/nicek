@@ -105,7 +105,9 @@ export default function RootLayout({
         {/* Structured data for search engine rich results */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
         />
 
         {/* Global Dynamic Header/Navbar */}
@@ -207,12 +209,12 @@ export default function RootLayout({
                   <div className="space-y-1.5 text-sm">
                     <span className="font-semibold text-zinc-200 flex items-center gap-1.5">
                       <MapPin className="w-3.5 h-3.5 text-zinc-500" />
-                      Boston Office
+                      NEW Jersey Office
                     </span>
                     <p className="text-zinc-300 leading-normal">
-                      304 North Cardinal St.
+                      921 Somerset Street.
                       <br />
-                      Dorchester Center, MA 02124
+                      Somerset, NJ 08873
                     </p>
                   </div>
                   <div className="space-y-1.5 text-sm sm:col-span-2">
