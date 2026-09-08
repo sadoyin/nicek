@@ -29,6 +29,19 @@
   in `handleContactSubmit` (`src/app/contact/page.tsx`) with a real delivery
   path (email and/or storage) and a genuine success/error state.
 
+## Hiring
+
+- [ ] 8. **Careers & job applications** - split into sub-features:
+  - [x] 8a. **Careers page** - lists open Nicek roles (Operations & Technical
+    Manager, QA/Regulatory Officer, Commercial & Finance Controller), linked
+    from the site footer.
+  - [ ] 8b. **Applicant accounts** - email/password signup and login via
+    Supabase Auth.
+  - [ ] 8c. **Job application flow** - authenticated apply form (name,
+    phone, cover note, resume upload) stored in Supabase.
+  - [ ] 8d. **Admin review page** - client-only page listing applications
+    per role, gated by an admin email allow-list.
+
 ## Continuing after the initial build
 
 This is a living roadmap, not a plan that freezes when the first release is

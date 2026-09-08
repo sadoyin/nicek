@@ -30,6 +30,10 @@ remains:
   reaching out.
 - People who already know the company and want contact details, office
   locations, or to submit an inquiry.
+- Job applicants browsing open Nicek roles and applying through a persistent
+  account (feature 8).
+- The Nicek admin (client) reviewing submitted applications through a
+  client-only page (feature 8).
 
 ## 3. Features - What does the MVP need?
 
@@ -47,14 +51,25 @@ Not yet shipped:
 
 - Make the contact form actually deliver submissions by email, with a real
   success/error state, replacing the current `console.log` stub (feature 7).
+- Careers page listing open Nicek roles, with applicant accounts and a job
+  application flow, plus a client-only admin page to review submissions
+  (feature 8, split into 8a-8d - see build plan).
 
 ## 4. Data - What are we storing?
 
-Nothing is persisted - there is no database, and none is planned. All content
-(subsidiary list, testimonials, company values, service descriptions, stats)
-is hardcoded as TypeScript arrays directly in the page files. Contact form
-submissions are emailed, not stored (decided when feature 7 was spec'd - see
-Tech below).
+Almost all content is still hardcoded as TypeScript arrays directly in the
+page files (subsidiary list, testimonials, company values, service
+descriptions, stats) - that does not change. Contact form submissions are
+still emailed, not stored.
+
+Feature 8 introduces the site's first real persistence, in Supabase:
+
+- Applicant accounts (email/password, via Supabase Auth).
+- Job applications - name, phone, cover note, resume file - linked to the
+  applicant's account and the role applied for. Resume files live in
+  Supabase Storage; everything else in Supabase Postgres.
+- Admin access to the review page is gated by an email allow-list, not a
+  full roles system - the client is the only admin for now.
 
 ## 5. Tech - What stack are we using?
 
@@ -71,7 +86,11 @@ Tech below).
   env var and, to send convincingly from `@nicekgroup.com`, sender-domain DNS
   records at Namecheap (separate from, but alongside, the Vercel domain
   cutover).
-- No database, no ORM, no auth provider.
+- **Supabase** (planned, feature 8) - Postgres database, Auth (applicant
+  accounts, admin gate), and Storage (resume uploads) for the careers/hiring
+  feature. Needs `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
+  and a service-role key for server-side admin queries.
+- No ORM - query Supabase directly via its JS client.
 - No test runner configured.
 - No CI (`.github/workflows/` absent).
 - Package manager: npm (`package-lock.json` present).

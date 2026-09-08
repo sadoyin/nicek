@@ -252,6 +252,12 @@ export default function RootLayout({
                   </h3>
                   <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs">
                     <Link
+                      href="/careers"
+                      className="hover:text-white transition-colors"
+                    >
+                      Careers
+                    </Link>
+                    <Link
                       href="#"
                       className="hover:text-white transition-colors"
                     >
