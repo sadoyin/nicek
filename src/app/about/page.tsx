@@ -99,7 +99,6 @@ export default function AboutPage() {
 
       {/* Page Header Banner */}
       <section className="relative bg-zinc-900 text-white py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url('/images/optimized/group_companies-1024x684.webp')` }} />
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-900/90 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <span className="text-sm font-bold uppercase tracking-widest text-zinc-400">

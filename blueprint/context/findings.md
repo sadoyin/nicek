@@ -21,3 +21,22 @@ temporary state, not a code defect.
 the Vercel URL is being shared/indexed in the meantime.
 **Resolution:**
 
+### F-11 [P2] open - `fill` images missing `sizes` default to full-viewport-width requests in a ~448px box
+
+**File:** src/app/services/tech/page.tsx:68, src/app/services/investments/page.tsx:68,
+src/app/services/food/page.tsx:68, src/app/services/exports/page.tsx:68,
+src/app/services/healthcare/page.tsx:69
+**Found:** 2026-09-07 by /audit (scope: full; lens: performance)
+**Why it matters:** Each of these `<Image fill>` usages renders inside the
+same `lg:col-span-5 relative aspect-square max-w-md` container used on
+`/services/autos` (max ~448px wide), but omits the `sizes` prop that
+`autos/page.tsx:76`, `about/page.tsx:174`, and `services/page.tsx:124` all
+set correctly. Per Next.js's documented behavior, a `fill` image with no
+`sizes` defaults to `sizes="100vw"`, so the browser's responsive `srcset`
+picks a source sized for the full viewport instead of the ~448px box it
+actually renders into - on a desktop viewport this requests an image several
+times larger than what is displayed, for no visual benefit.
+**Suggested fix:** Add the same `sizes="(max-width: 1024px) 100vw, 40vw"` (or
+the exact container-appropriate equivalent) already used on the sibling
+pages to each of these five `<Image>` elements.
+**Resolution:**
