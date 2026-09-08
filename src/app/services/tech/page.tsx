@@ -28,6 +28,7 @@ export default function TechPage() {
 
       {/* Banner */}
       <section className="relative bg-zinc-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('/images/optimized/jacqueline-day-1SapfOEZN2g-unsplash-bg.webp')` }} />
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-900/90 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <Link href="/services" className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-400 hover:text-white uppercase tracking-wider transition-colors">
