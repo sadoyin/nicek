@@ -16,11 +16,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Nicek Group's offices in Wyoming, Boston, and Lagos for partnerships, supply requests, and consulting services.",
+    "Get in touch with Nicek Group's offices in Wyoming, New Jersey, and Lagos for partnerships, supply requests, and consulting services.",
   openGraph: {
     title: "Contact Us | Nicek Group",
     description:
-      "Get in touch with Nicek Group's offices in Wyoming, Boston, and Lagos for partnerships, supply requests, and consulting services.",
+      "Get in touch with Nicek Group's offices in Wyoming, New Jersey, and Lagos for partnerships, supply requests, and consulting services.",
   },
 };
 
@@ -140,12 +140,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     <div className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
                       <Building className="w-5 h-5" />
                     </div>
-                    <CardTitle className="text-lg font-bold">Boston Office (US)</CardTitle>
+                    <CardTitle className="text-lg font-bold">New Jersey Office (US)</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
                     <p className="flex items-start gap-2">
                       <MapPin className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
-                      <span>304 North Cardinal St., Dorchester Center, MA 02124</span>
+                      <span>921 Somerset Street, Somerset, NJ 08873</span>
                     </p>
                     <p className="flex items-center gap-2">
                       <Mail className="w-4 h-4 text-zinc-400 shrink-0" />
