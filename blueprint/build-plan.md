@@ -35,7 +35,7 @@
   - [x] 8a. **Careers page** - lists open Nicek roles (Operations & Technical
     Manager, QA/Regulatory Officer, Commercial & Finance Controller), linked
     from the site footer.
-  - [ ] 8b. **Applicant accounts** - email/password signup and login via
+  - [x] 8b. **Applicant accounts** - email/password signup and login via
     Supabase Auth.
   - [ ] 8c. **Job application flow** - authenticated apply form (name,
     phone, cover note, resume upload) stored in Supabase.
