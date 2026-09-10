@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
     const { error } = await supabase.auth.verifyOtp({ type, token_hash });
 
     if (!error) {
-      redirect("/login?confirmed=true");
+      redirect("/careers");
     }
   }
 

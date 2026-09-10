@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { CheckCircle2, XCircle, UserPlus } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export const metadata: Metadata = {
   title: "Sign Up",
@@ -141,6 +142,7 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                       name="email"
                       type="email"
                       required
+                      placeholder="you@example.com"
                       className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
                     />
                   </div>
@@ -151,13 +153,12 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                     >
                       Password
                     </label>
-                    <input
+                    <PasswordInput
                       id="password"
                       name="password"
-                      type="password"
                       required
                       minLength={6}
-                      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
+                      placeholder="At least 6 characters"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -167,13 +168,12 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                     >
                       Confirm Password
                     </label>
-                    <input
+                    <PasswordInput
                       id="confirmPassword"
                       name="confirmPassword"
-                      type="password"
                       required
                       minLength={6}
-                      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
+                      placeholder="Re-enter your password"
                     />
                   </div>
                   <button

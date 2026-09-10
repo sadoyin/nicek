@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { CheckCircle2, XCircle, AlertCircle, LogIn } from "lucide-react";
+import { XCircle, AlertCircle, LogIn } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export const metadata: Metadata = {
   title: "Log In",
@@ -53,7 +54,6 @@ interface LoginPageProps {
   searchParams?: Promise<{
     next?: string;
     error?: string;
-    confirmed?: string;
     confirmError?: string;
   }>;
 }
@@ -72,7 +72,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
   }
 
   const errorMessage = params?.error;
-  const isConfirmed = params?.confirmed === "true";
   const isConfirmError = params?.confirmError === "true";
 
   return (
@@ -102,15 +101,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 Log In
               </h2>
             </div>
-
-            {isConfirmed ? (
-              <div className="rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-4 flex items-start gap-2.5">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                <p className="text-sm text-emerald-600 dark:text-emerald-500">
-                  Email confirmed. Log in below.
-                </p>
-              </div>
-            ) : null}
 
             {isConfirmError ? (
               <div className="rounded-xl bg-amber-500/10 border border-amber-500/20 p-4 flex items-start gap-2.5">
@@ -151,6 +141,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                   name="email"
                   type="email"
                   required
+                  placeholder="you@example.com"
                   className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
                 />
               </div>
@@ -161,12 +152,11 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 >
                   Password
                 </label>
-                <input
+                <PasswordInput
                   id="password"
                   name="password"
-                  type="password"
                   required
-                  className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
+                  placeholder="Enter your password"
                 />
               </div>
               <button
