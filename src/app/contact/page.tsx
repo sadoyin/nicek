@@ -12,6 +12,7 @@ import {
 import { redirect } from "next/navigation";
 import { Resend } from "resend";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { SubmitButton } from "@/components/SubmitButton";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -315,13 +316,13 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                         />
                       </div>
 
-                      <button 
-                        type="submit" 
+                      <SubmitButton
+                        pendingText="Sending..."
                         className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 py-3 font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
                       >
                         <Send className="w-4 h-4" />
                         Send Message
-                      </button>
+                      </SubmitButton>
                     </form>
                   )}
                 </CardContent>

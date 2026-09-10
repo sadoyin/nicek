@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
+import { SubmitButton } from "@/components/SubmitButton";
 
 export const metadata: Metadata = {
   title: "Log Out",
@@ -40,12 +41,12 @@ export default function LogoutPage() {
               Ready to end your session?
             </p>
             <form action={handleLogout}>
-              <button
-                type="submit"
+              <SubmitButton
+                pendingText="Logging out..."
                 className="w-full rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 px-4 py-2.5 text-sm font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
               >
                 Log Out
-              </button>
+              </SubmitButton>
             </form>
           </div>
         </div>

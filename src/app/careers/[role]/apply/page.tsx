@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { CheckCircle2, XCircle, Send } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { getRoleBySlug } from "@/lib/careerRoles";
+import { SubmitButton } from "@/components/SubmitButton";
 
 interface ApplyPageProps {
   params: Promise<{ role: string }>;
@@ -261,12 +262,12 @@ export default async function ApplyPage({ params, searchParams }: ApplyPageProps
                       className="w-full text-sm text-zinc-600 dark:text-zinc-400 file:mr-3 file:rounded-lg file:border-0 file:bg-zinc-900 file:dark:bg-white file:text-white file:dark:text-zinc-950 file:px-3.5 file:py-2 file:text-sm file:font-semibold"
                     />
                   </div>
-                  <button
-                    type="submit"
+                  <SubmitButton
+                    pendingText="Submitting..."
                     className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 px-4 py-2.5 text-sm font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
                   >
                     <Send className="w-4 h-4" /> Submit Application
-                  </button>
+                  </SubmitButton>
                 </form>
               </>
             )}

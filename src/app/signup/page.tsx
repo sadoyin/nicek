@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { CheckCircle2, XCircle, UserPlus } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { PasswordInput } from "@/components/PasswordInput";
+import { SubmitButton } from "@/components/SubmitButton";
 
 export const metadata: Metadata = {
   title: "Sign Up",
@@ -176,12 +177,12 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                       placeholder="Re-enter your password"
                     />
                   </div>
-                  <button
-                    type="submit"
+                  <SubmitButton
+                    pendingText="Signing up..."
                     className="w-full rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 px-4 py-2.5 text-sm font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
                   >
                     Sign Up
-                  </button>
+                  </SubmitButton>
                 </form>
 
                 <p className="text-center text-sm text-zinc-500">
