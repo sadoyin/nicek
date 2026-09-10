@@ -31,7 +31,7 @@
 
 ## Hiring
 
-- [ ] 8. **Careers & job applications** - split into sub-features:
+- [x] 8. **Careers & job applications** - split into sub-features:
   - [x] 8a. **Careers page** - lists open Nicek roles (Operations & Technical
     Manager, QA/Regulatory Officer, Commercial & Finance Controller), linked
     from the site footer.
@@ -39,7 +39,7 @@
     Supabase Auth.
   - [x] 8c. **Job application flow** - authenticated apply form (name,
     phone, cover note, resume upload) stored in Supabase.
-  - [ ] 8d. **Admin review page** - client-only page listing applications
+  - [x] 8d. **Admin review page** - client-only page listing applications
     per role, gated by an admin email allow-list.
 
 ## Continuing after the initial build
