@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Wrench, ShieldCheck, Landmark, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -9,6 +9,7 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
+import { roles } from "@/lib/careerRoles";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -20,33 +21,6 @@ export const metadata: Metadata = {
       "Explore open leadership roles at Nicek Group: Operations & Technical Manager, QA/Regulatory Officer, and Commercial & Finance Controller.",
   },
 };
-
-const roles = [
-  {
-    slug: "operations-technical-manager",
-    title: "Operations & Technical Manager",
-    summary:
-      "Runs the factory: rehab, production, equipment, maintenance, and daily supervision.",
-    onboardBy: "Day 10",
-    icon: Wrench,
-  },
-  {
-    slug: "qa-regulatory-officer",
-    title: "QA / Regulatory Officer",
-    summary:
-      "Quality control and NAFDAC/SON compliance, with authority to stop production if standards aren't met.",
-    onboardBy: "Day 10",
-    icon: ShieldCheck,
-  },
-  {
-    slug: "commercial-finance-controller",
-    title: "Commercial & Finance Controller",
-    summary:
-      "Sales, distribution, cash collection, and inventory, run under strict cash/credit controls.",
-    onboardBy: "Day 15",
-    icon: Landmark,
-  },
-];
 
 export default function CareersPage() {
   return (

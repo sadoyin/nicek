@@ -37,7 +37,7 @@
     from the site footer.
   - [x] 8b. **Applicant accounts** - email/password signup and login via
     Supabase Auth.
-  - [ ] 8c. **Job application flow** - authenticated apply form (name,
+  - [x] 8c. **Job application flow** - authenticated apply form (name,
     phone, cover note, resume upload) stored in Supabase.
   - [ ] 8d. **Admin review page** - client-only page listing applications
     per role, gated by an admin email allow-list.

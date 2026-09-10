@@ -93,7 +93,7 @@ export default function CommercialFinanceControllerPage() {
             </p>
             <div className="relative z-10 pt-2">
               <Link
-                href="/contact"
+                href="/careers/commercial-finance-controller/apply"
                 className="inline-flex items-center gap-2 rounded-lg bg-white text-zinc-950 px-6 py-3 font-semibold hover:bg-zinc-100 transition-colors"
               >
                 <Send className="w-4 h-4" /> Apply Now
