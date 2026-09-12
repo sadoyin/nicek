@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { LogOut } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
+import { logout } from "@/lib/auth-actions";
 import { SubmitButton } from "@/components/SubmitButton";
 
 export const metadata: Metadata = {
   title: "Log Out",
   description: "Log out of your Nicek Group applicant account.",
 };
-
-async function handleLogout() {
-  "use server";
-
-  const supabase = await createClient();
-  await supabase.auth.signOut();
-  redirect("/");
-}
 
 export default function LogoutPage() {
   return (
@@ -40,7 +31,7 @@ export default function LogoutPage() {
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Ready to end your session?
             </p>
-            <form action={handleLogout}>
+            <form action={logout}>
               <SubmitButton
                 pendingText="Logging out..."
                 className="w-full rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 px-4 py-2.5 text-sm font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"

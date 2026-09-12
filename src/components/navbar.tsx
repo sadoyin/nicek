@@ -4,19 +4,24 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Sun, 
-  Moon, 
-  Heart, 
-  Globe2, 
-  Wrench, 
-  TrendingUp, 
-  Cpu, 
-  Utensils 
+import type { User } from "@supabase/supabase-js";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Sun,
+  Moon,
+  Heart,
+  Globe2,
+  Wrench,
+  TrendingUp,
+  Cpu,
+  Utensils,
+  LogOut
 } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
+import { logout } from "@/lib/auth-actions";
+import { SubmitButton } from "@/components/SubmitButton";
 
 const dropdownItems = [
   { name: "Healthcare Services", href: "/services/healthcare", icon: Heart, desc: "Trusted patient care & wellness" },
@@ -31,7 +36,23 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = React.useState(false);
   const [theme, setTheme] = React.useState<"light" | "dark">("light");
+  const [user, setUser] = React.useState<User | null>(null);
   const pathname = usePathname();
+
+  // Client-side session check - keeps auth-dependent nav items out of the
+  // root layout so pages that don't need auth stay statically rendered.
+  React.useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data }) => setUser(data.user));
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   // Handle theme synchronization
   React.useEffect(() => {
@@ -158,6 +179,18 @@ export function Navbar() {
           <Link href="/contact" className={`transition-colors hover:text-zinc-950 dark:hover:text-white ${pathname === "/contact" ? "text-zinc-950 dark:text-white" : ""}`}>
             Contact
           </Link>
+
+          {user && (
+            <form action={logout}>
+              <SubmitButton
+                pendingText="Logging out..."
+                className="flex items-center gap-1.5 transition-colors hover:text-zinc-950 dark:hover:text-white"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
+              </SubmitButton>
+            </form>
+          )}
         </nav>
 
         {/* Action Controls: Theme Toggler & Get in Touch / Mobile Menu button */}
@@ -235,14 +268,26 @@ export function Navbar() {
               </div>
             </div>
 
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className={`text-base font-semibold py-2 ${pathname === "/contact" ? "text-zinc-950 dark:text-white" : "text-zinc-600 dark:text-zinc-400"}`}
             >
               Contact
             </Link>
-            
-            <Link 
+
+            {user && (
+              <form action={logout}>
+                <SubmitButton
+                  pendingText="Logging out..."
+                  className="w-full flex items-center gap-2 text-base font-semibold py-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors"
+                >
+                  <LogOut className="w-4 h-4" />
+                  Logout
+                </SubmitButton>
+              </form>
+            )}
+
+            <Link
               href="/contact" 
               className="inline-flex w-full items-center justify-center rounded-lg bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 py-3 font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
             >
