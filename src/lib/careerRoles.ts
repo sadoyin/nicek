@@ -6,7 +6,6 @@ export const roles = [
     title: "Operations & Technical Manager",
     summary:
       "Runs the factory: rehab, production, equipment, maintenance, and daily supervision.",
-    onboardBy: "Day 10",
     icon: Wrench,
   },
   {
@@ -14,7 +13,6 @@ export const roles = [
     title: "QA / Regulatory Officer",
     summary:
       "Quality control and NAFDAC/SON compliance, with authority to stop production if standards aren't met.",
-    onboardBy: "Day 10",
     icon: ShieldCheck,
   },
   {
@@ -22,7 +20,6 @@ export const roles = [
     title: "Commercial & Finance Controller",
     summary:
       "Sales, distribution, cash collection, and inventory, run under strict cash/credit controls.",
-    onboardBy: "Day 15",
     icon: Landmark,
   },
 ];

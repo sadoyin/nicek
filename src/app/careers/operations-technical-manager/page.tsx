@@ -5,11 +5,11 @@ import { Wrench, ArrowLeft, CheckCircle, Send } from "lucide-react";
 export const metadata: Metadata = {
   title: "Operations & Technical Manager",
   description:
-    "Nicek Group is hiring an Operations & Technical Manager to run factory rehab, production, equipment, maintenance, and daily supervision. Onboard by Day 10.",
+    "Nicek Group is hiring an Operations & Technical Manager to run factory rehab, production, equipment, maintenance, and daily supervision.",
   openGraph: {
     title: "Operations & Technical Manager | Careers at Nicek Group",
     description:
-      "Nicek Group is hiring an Operations & Technical Manager to run factory rehab, production, equipment, maintenance, and daily supervision. Onboard by Day 10.",
+      "Nicek Group is hiring an Operations & Technical Manager to run factory rehab, production, equipment, maintenance, and daily supervision.",
   },
 };
 
@@ -45,7 +45,7 @@ export default function OperationsTechnicalManagerPage() {
             </div>
             <div>
               <span className="text-sm font-bold uppercase tracking-widest text-zinc-400">
-                Open Position &middot; Onboard by Day 10
+                Open Position
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white mt-1">
                 Operations & Technical Manager

@@ -5,11 +5,11 @@ import { ShieldCheck, ArrowLeft, CheckCircle, Send } from "lucide-react";
 export const metadata: Metadata = {
   title: "QA / Regulatory Officer",
   description:
-    "Nicek Group is hiring a QA / Regulatory Officer for quality control and NAFDAC/SON compliance, with authority to stop production if standards aren't met. Onboard by Day 10.",
+    "Nicek Group is hiring a QA / Regulatory Officer for quality control and NAFDAC/SON compliance, with authority to stop production if standards aren't met.",
   openGraph: {
     title: "QA / Regulatory Officer | Careers at Nicek Group",
     description:
-      "Nicek Group is hiring a QA / Regulatory Officer for quality control and NAFDAC/SON compliance, with authority to stop production if standards aren't met. Onboard by Day 10.",
+      "Nicek Group is hiring a QA / Regulatory Officer for quality control and NAFDAC/SON compliance, with authority to stop production if standards aren't met.",
   },
 };
 
@@ -45,7 +45,7 @@ export default function QaRegulatoryOfficerPage() {
             </div>
             <div>
               <span className="text-sm font-bold uppercase tracking-widest text-zinc-400">
-                Open Position &middot; Onboard by Day 10
+                Open Position
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white mt-1">
                 QA / Regulatory Officer

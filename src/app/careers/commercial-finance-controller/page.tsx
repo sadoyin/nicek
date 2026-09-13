@@ -5,11 +5,11 @@ import { Landmark, ArrowLeft, CheckCircle, Send } from "lucide-react";
 export const metadata: Metadata = {
   title: "Commercial & Finance Controller",
   description:
-    "Nicek Group is hiring a Commercial & Finance Controller for sales, distribution, cash collection, and inventory under strict cash/credit controls. Onboard by Day 15.",
+    "Nicek Group is hiring a Commercial & Finance Controller for sales, distribution, cash collection, and inventory under strict cash/credit controls.",
   openGraph: {
     title: "Commercial & Finance Controller | Careers at Nicek Group",
     description:
-      "Nicek Group is hiring a Commercial & Finance Controller for sales, distribution, cash collection, and inventory under strict cash/credit controls. Onboard by Day 15.",
+      "Nicek Group is hiring a Commercial & Finance Controller for sales, distribution, cash collection, and inventory under strict cash/credit controls.",
   },
 };
 
@@ -46,7 +46,7 @@ export default function CommercialFinanceControllerPage() {
             </div>
             <div>
               <span className="text-sm font-bold uppercase tracking-widest text-zinc-400">
-                Open Position &middot; Onboard by Day 15
+                Open Position
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white mt-1">
                 Commercial & Finance Controller

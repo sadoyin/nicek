@@ -57,13 +57,8 @@ export default function CareersPage() {
               return (
                 <Card key={role.slug} className="flex flex-col h-full">
                   <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div className="p-2.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-lg w-fit">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold border bg-zinc-50 text-zinc-700 border-zinc-200 dark:bg-zinc-900 dark:text-zinc-300 dark:border-zinc-800">
-                        Onboard by {role.onboardBy}
-                      </span>
+                    <div className="p-2.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-lg w-fit">
+                      <Icon className="w-5 h-5" />
                     </div>
                     <CardTitle className="pt-2">{role.title}</CardTitle>
                     <CardDescription>{role.summary}</CardDescription>
