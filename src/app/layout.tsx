@@ -8,6 +8,7 @@ import "./globals.css";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { FacebookIcon } from "@/components/FacebookIcon";
 import { YoutubeIcon } from "@/components/YoutubeIcon";
+import { TiktokIcon } from "@/components/TiktokIcon";
 import { getSiteUrl } from "@/lib/site-url";
 
 const geistSans = Geist({
@@ -56,8 +57,9 @@ const organizationJsonLd = {
   logo: `${getSiteUrl()}/images/optimized/cropped-logo_nicek.webp`,
   sameAs: [
     "https://instagram.com/nicekgroup",
-    "https://facebook.com/nicekgroup",
+    "https://www.facebook.com/share/1EodsFzt9S/?mibextid=wwXIfr",
     "https://youtube.com/nicekgroup",
+    "https://www.tiktok.com/@nicek.group.llc",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -156,7 +158,7 @@ export default function RootLayout({
                   <div className="flex items-center gap-2.5 text-sm">
                     <InstagramIcon className="w-4 h-4 text-zinc-500 shrink-0" />
                     <a
-                      href="https://instagram.com/nicekgroup"
+                      href="https://instagram.com/nicekgroupllc"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300"
@@ -167,7 +169,7 @@ export default function RootLayout({
                   <div className="flex items-center gap-2.5 text-sm">
                     <FacebookIcon className="w-4 h-4 text-zinc-500 shrink-0" />
                     <a
-                      href="https://facebook.com/nicekgroup"
+                      href="https://www.facebook.com/share/1EodsFzt9S/?mibextid=wwXIfr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300"
@@ -184,6 +186,17 @@ export default function RootLayout({
                       className="text-blue-400 hover:text-blue-300"
                     >
                       Youtube
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-sm">
+                    <TiktokIcon className="w-4 h-4 text-zinc-500 shrink-0" />
+                    <a
+                      href="https://www.tiktok.com/@nicek.group.llc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300"
+                    >
+                      TikTok
                     </a>
                   </div>
                 </div>
